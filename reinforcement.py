@@ -55,24 +55,11 @@ class Solution:
             for i in range(num_actions ** num_players):
                 ans_dict[i] = ()
                 for j in range(num_players):
-                    ans_dict[i] = (j //  (num_actions**j) % num_actions,)
+                    ans_dict[i] += (i //  (num_actions**j) % num_actions,)
                 ans_dict[ans_dict[i]] = i
 
             return ans_dict
-                     
-            # ans_dict = {}
-            # counter = 0
-            # for i in range(num_players):
-            #     if len(ans_dict.keys()) <= i:
-            #         ans_dict[[]] = counter
-            #     else:
-            #         for j in range(num_actions):
-            #             ans_dict[list(ans_dict.keys())[i]]
-            
-                     
-                    
 
-    
 def main():
     input1 = input()
     input1= int(input1)
